@@ -11,41 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['product_name'];
         $price = $_POST['product_price'];
         $classType = $_POST['type_switcher'];
-
-        $db_obj = new $classType($sku, $name, $price, $classType);
+        $special_attribute = $_POST['height_input'] . 'x' . $_POST['width_input'] . 'x' . $_POST['length_input'];
+        $special_attribute = $_POST['size_input'] !== null ? $_POST['size_input'] : $special_attribute;
+        $special_attribute = $_POST['weight_input'] !== null ? $_POST['weight_input'] : $special_attribute;
+        $db_obj = new $classType($sku, $name, $price, $classType, $special_attribute);
 
         // Additional checks for specific product type data
-        if ($classType === 'DVD') {
-            $size = $_POST['dvd_input'];
-            if (empty($size)) {
-                header('location: ../index.php?error=empty_fields');
-                exit();
-            }
-            $db_obj->setSize($size); // Assuming you have a method to set size in your DVD class
-        } elseif ($classType === 'Furniture') {
-            // Similar checks and handling for Furniture
-            $height = $_POST['height_input'];
-            $width = $_POST['width_input'];
-            $length = $_POST['length_input'];
-            if (empty($height) || empty($width) || empty($length) ) {
-                header('location: ../index.php?error=empty_fields');
-                exit();
-            }
-
-            $db_obj->setDimentions($height, $width, $length);
-            
-        } elseif ($classType === 'Book') {
-            // Similar checks and handling for Book
-            $weight = $_POST['weight_input'];
-
-            if (empty($weight)) {
-                header('location: ../index.php?error=empty_fields');
-                exit();
-            }
-
-            $db_obj->setWeight($weight);
-        }
-
         if (empty($sku) || empty($name) || empty($price)) {
             header('location: ../index.php?error=empty_fields');
             exit();

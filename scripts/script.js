@@ -12,7 +12,7 @@ selector.addEventListener('change', function (){
 			
 		const dvd = document.createElement('input');
 		dvd.type = 'number';
-		dvd.name = 'dvd_input';
+		dvd.name = 'size_input';
 		dvd.placeholder = 'Enter the size (in MB)';
 		dvd.className = 'input';
 
@@ -24,7 +24,7 @@ selector.addEventListener('change', function (){
 		height_label.textContent = 'Height: ';
 
 		const height = document.createElement('input');
-		height.type = 'number';
+		height.type = 'text';
 		height.name = 'height_input';
 		height.placeholder = 'Enter the Height: ';
 		height.className = 'furniture-input';
@@ -33,7 +33,7 @@ selector.addEventListener('change', function (){
 		width_label.textContent = 'Width: ';
 
 		const width = document.createElement('input');
-		width.type = 'number';
+		width.type = 'text';
 		width.name = 'width_input';
 		width.placeholder = 'Enter the Width';
 		width.className = 'furniture-input';
@@ -42,7 +42,7 @@ selector.addEventListener('change', function (){
 		length_label.textContent = 'Length: ';
 
 		const length = document.createElement('input');
-		length.type = 'number';
+		length.type = 'text';
 		length.name = 'length_input';
 		length.placeholder = 'Enter the Width';
 		length.className = 'furniture-input';
@@ -71,28 +71,3 @@ selector.addEventListener('change', function (){
 		generated_li.appendChild(weight);
 	}
 })
-
-document.addEventListener("DOMContentLoaded", function () {
-    const inputs = document.querySelectorAll(".inputs input");
-    
-    inputs.forEach(input => {
-        input.addEventListener("focus", function () {
-            const errorMessage = document.createElement("p");
-            errorMessage.classList.add("error-message");
-            errorMessage.textContent = "This field cannot be empty";
-            
-            if (!input.parentNode.querySelector(".error-message")) {
-                input.parentNode.appendChild(errorMessage);
-            }
-        });
-        
-        input.addEventListener("blur", function () {
-            const errorMessage = input.parentNode.querySelector(".error-message");
-            if (input.value.trim() === "") {
-                errorMessage.style.display = "block";
-            } else {
-                errorMessage.style.display = "none";
-            }
-        });
-    });
-});

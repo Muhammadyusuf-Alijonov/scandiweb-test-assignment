@@ -7,33 +7,15 @@ abstract class Db_object extends Database
     protected $name;
     protected $price;
     protected $product_type;
-    // protected $measurmens;
+    protected $special_attribute;
 
-    public function __construct($sku, $name, $price, $product_type) {
+    public function __construct($sku, $name, $price, $product_type, $special_attribute) {
         $this->sku = $sku;
         $this->name = $name;
         $this->price = $price;
         $this->product_type = $product_type;
+        $this->$special_attribute = $special_attribute;
     }
 
     abstract public function add();
-    // public function add($sku, $name, $price, $size)
-    // {
-    //     $sql = "INSERT INTO products(sku, product_name, product_price, size) VALUES (:sku, :product_name, :product_price, :product_size);";
-
-    //     $stmt = $this->connect()->prepare($sql);
-
-    //     $stmt->bindParam(':sku', $sku);
-    //     $stmt->bindParam(':product_name', $name);
-    //     $stmt->bindParam(':product_price', $price);
-    //     $stmt->bindParam(':product_size', $size);
-
-    //     try {
-    //         $stmt->execute();
-    //         return true;
-    //     } catch (PDOException $e) {
-    //         die('Error: ' . $e->getMessage());
-    //         return false;
-    //     }
-    // }
 }
