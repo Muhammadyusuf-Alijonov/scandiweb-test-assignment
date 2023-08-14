@@ -61,7 +61,7 @@
                                 <p>SKU: <?php echo $product["sku"] ?></p>
                                 <p>Name: <?php echo $product["product_name"] ?></p>
                                 <p>Price: $<?php echo $product["product_price"] ?></p>
-                                <p>Weight: <?php echo $product['product_weight'] ?></p>
+                                <p>Weight: <?php echo $product['product_weight'] ?>kg</p>
                             </div>
                         </div>
                 <?php
