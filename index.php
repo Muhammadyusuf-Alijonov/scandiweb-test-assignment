@@ -39,7 +39,6 @@
                                 <p>Size: <?php echo $product['product_size'] ?></p>
                             </div>
                         </div>
-
                     <?php
                     } elseif ($product['product_type'] === 'Furniture') {
                     ?>

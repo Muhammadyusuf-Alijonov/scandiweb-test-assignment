@@ -7,9 +7,11 @@ abstract class Db_object extends Database
     protected $name;
     protected $price;
     protected $product_type;
+    protected $feature_type;
     protected $special_attribute;
 
-    public function __construct($sku, $name, $price, $product_type, $special_attribute) {
+    public function __construct($sku, $name, $price, $product_type, $special_attribute)
+    {
         $this->sku = $sku;
         $this->name = $name;
         $this->price = $price;
