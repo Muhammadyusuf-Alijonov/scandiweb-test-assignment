@@ -45,8 +45,6 @@
 					<li class="generated_li inputs">
 					</li>
 				</ul>
-
-
 			</div>
 		</main>
 	</form>

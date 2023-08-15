@@ -1,5 +1,5 @@
 <?php
-require_once 'database.php';
+require_once 'database.class.php';
 
 abstract class Db_object extends Database
 {

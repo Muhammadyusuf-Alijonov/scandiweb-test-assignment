@@ -1,8 +1,8 @@
 <?php
-require_once('../classes/db_object.php');
+require_once('../classes/db_object.class.php');
 require_once('../classes/dvd.class.php');
-require_once('../classes/furniture.php');
-require_once('../classes/book.php');
+require_once('../classes/furniture.class.php');
+require_once('../classes/book.class.php');
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

@@ -1,4 +1,4 @@
-<?php require_once 'classes/getProducts.php'; ?>
+<?php require_once 'classes/getProducts.class.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +33,7 @@
                         <div class="product">
                             <input class="delete-checkbox" type="checkbox" name="product_selected[]">
                             <div class="product-info">
-                                <p>SKU: <?php echo $product["sku"] ?></p>
+	                            <p>SKU: <?php echo $product["sku"] ?></p>
                                 <p>Name: <?php echo $product["product_name"] ?></p>
                                 <p>Price: $<?php echo $product["product_price"] ?></p>
                                 <p>Size: <?php echo $product['product_size'] ?></p>
