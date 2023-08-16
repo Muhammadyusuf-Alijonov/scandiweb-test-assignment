@@ -7,14 +7,14 @@ selector.addEventListener('change', function (){
 
 	if (selectedOption === 'DVD'){
 		const dvd_label = document.createElement('label');
-		dvd_label.textContent = "Size of DVD (in MB):";
+		dvd_label.textContent = "Size of DVD:";
 
 		const dvd = document.createElement('input');
 		dvd.type = 'number';
 		dvd.step = '00.01';
 		dvd.name = 'size_input';
 		dvd.placeholder = 'Enter the size...';
-		dvd.className = 'input size-input dimension';
+		dvd.className = 'size-input dimension';
 
 		generated_li.appendChild(dvd_label);
 		generated_li.appendChild(dvd);
@@ -50,26 +50,33 @@ selector.addEventListener('change', function (){
 		length.placeholder = 'Enter the length...';
 		length.className = 'furniture-input dimension';
 
-		generated_li.appendChild(height_label);
-		generated_li.appendChild(height);
+		const dimensionsDiv = document.createElement('div');
+		dimensionsDiv.className = 'dimensions-div';
 
-		generated_li.appendChild(width_label);
-		generated_li.appendChild(width);
+		generated_li.appendChild(dimensionsDiv);
 
-		generated_li.appendChild(length_label);
-		generated_li.appendChild(length);
+		dimensionsDiv.appendChild(height_label);
+		dimensionsDiv.appendChild(height);
+
+		dimensionsDiv.appendChild(width_label);
+		dimensionsDiv.appendChild(width);
+
+		dimensionsDiv.appendChild(length_label);
+		dimensionsDiv.appendChild(length);
+
+		dimensionsDiv.appendChild(dimensionsError);
 
 	} else if (selectedOption === 'Book') {
 
 		const weight_label = document.createElement('label');
-		weight_label.textContent = 'Weight of Book (in Kg): '
+		weight_label.textContent = 'Weight of Book: '
 
 		const weight = document.createElement('input');
 		weight.type = 'number';
 		weight.step = '00.01';
 		weight.name = 'weight_input';
 		weight.placeholder = 'Enter the weight... ';
-		weight.className = 'weigth-input dimension';
+		weight.className = 'weight-input dimension';
 
 		generated_li.appendChild(weight_label);
 		generated_li.appendChild(weight);

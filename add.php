@@ -43,7 +43,6 @@
 						</select>
 					</li>
 					<li class="generated_li li-inputs">
-
 					</li>
 				</ul>
 			</div>

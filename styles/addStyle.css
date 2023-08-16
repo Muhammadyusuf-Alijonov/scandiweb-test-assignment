@@ -66,6 +66,11 @@ nav h1 {
     width: 500px;
 }
 
+.li-inputs p {
+    margin: 5px 160px;
+    height: 15px;
+    width: 400px;
+}
 /*.li-inputs li {*/
 /*    !*margin-right: 30px;*!*/
 /*}*/
@@ -79,13 +84,13 @@ nav h1 {
     flex-direction: column;
 }
 
-.generated_li {
-    margin-left: 150px;
-}
-
 .dimension {
     margin-bottom: 10px;
     margin-top: 5px;
+}
+
+.dimensions-div {
+    margin-left: 150px;
 }
 
 .sku-input {
@@ -99,4 +104,10 @@ nav h1 {
 }
 .type-input{
     margin-left: 38px;
+}
+.weight-input {
+    margin-left: 25px;
+}
+.size-input {
+    margin-left: 49px;
 }
