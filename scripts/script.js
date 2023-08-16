@@ -1,11 +1,11 @@
 let generated_li = document.querySelector(".generated_li");
 let selector = document.getElementById('type_switcher');
 
-selector.addEventListener('change', function (){
+selector.addEventListener('change', function () {
 	const selectedOption = selector.value;
 	generated_li.textContent = '';
 
-	if (selectedOption === 'DVD'){
+	if (selectedOption === 'DVD') {
 		const dvd_label = document.createElement('label');
 		dvd_label.textContent = "Size of DVD:";
 
