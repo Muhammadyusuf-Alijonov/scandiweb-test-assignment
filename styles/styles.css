@@ -12,17 +12,20 @@ nav {
 }
 
 nav h1 {
-	margin-left: 4rem;
+	font-size: 35px;
+	margin-left: 5rem;
 }
 
 .buttons {
-	margin-right: 3rem;
+	margin-right: 8rem;
 }
 
 .add-btn {
+	height: 45px;
+	width: 70px;
 	padding: 10px 15px;
 	margin-right: 10px;
-	background-color: #53c4c4;
+	background-color: #0962ea;
 	border: none;
 	color: white;
 	cursor: pointer;
@@ -35,6 +38,8 @@ nav h1 {
 }
 
 .delete-btn {
+	height: 45px;
+	width: 150px;
 	padding: 10px 15px 10px 15px;
 	margin-left: 10px;
 	background-color: #fb3636;
@@ -64,8 +69,8 @@ footer p {
 
 .product {
 	margin: 15px;
-	height: 150px;
-	width: 200px;
+	height: 235px;
+	width: 350px;
 	border: 1px solid black;
 	border-radius: 10px;
 	box-shadow: 1.5px 1.5px;
@@ -85,8 +90,15 @@ footer p {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	margin-top: 40px;
+}
+
+.product-info p {
+	font-size: 22px;
 }
 
 footer p {
+	font-size: 20px;
+	font-weight: bold;
 	margin: 15px;
 }

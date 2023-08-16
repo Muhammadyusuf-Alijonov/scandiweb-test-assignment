@@ -27,44 +27,42 @@
             <div class="product-container">
                 <?php
                 $result = new GetProduct();
-                foreach ($result->getProduct() as $product) {
-                    if ($product['product_type'] === 'DVD') {
-                ?>
-                        <div class="product">
-                            <input class="delete-checkbox" type="checkbox" name="product_selected[]">
-                            <div class="product-info">
-	                            <p>SKU: <?php echo $product["sku"] ?></p>
-                                <p>Name: <?php echo $product["product_name"] ?></p>
-                                <p>Price: $<?php echo $product["product_price"] ?></p>
-                                <p>Size: <?php echo $product['product_size'] ?></p>
-                            </div>
+                foreach ($result->getProduct() as $product) if ($product['product_type'] === 'DVD') {
+            ?>
+                    <div class="product">
+                        <input class="delete-checkbox" type="checkbox" name="product_selected[]">
+                        <div class="product-info">
+	                        <p><?php echo $product["sku"] ?></p>
+                            <p><?php echo $product["product_name"] ?></p>
+                            <p>$<?php echo number_format($product["product_price"],2) ?></p>
+                            <p>Size: <?php echo $product['product_size'] ?>MB</p>
                         </div>
-                    <?php
-                    } elseif ($product['product_type'] === 'Furniture') {
-                    ?>
-                        <div class="product">
-                            <input class="delete-checkbox" type="checkbox" name="product_selected[]">
-                            <div class="product-info">
-                                <p>SKU: <?php echo $product["sku"] ?></p>
-                                <p>Name: <?php echo $product["product_name"] ?></p>
-                                <p>Price: $<?php echo $product["product_price"] ?></p>
-                                <p>Dimentions: <?php echo $product['product_dimensions'] ?></p>
-                            </div>
-                        </div>
-                    <?php
-                    } elseif ($product['product_type'] === 'Book') {
-                    ?>
-                        <div class="product">
-                            <input class="delete-checkbox" type="checkbox" name="product_selected[]">
-                            <div class="product-info">
-                                <p>SKU: <?php echo $product["sku"] ?></p>
-                                <p>Name: <?php echo $product["product_name"] ?></p>
-                                <p>Price: $<?php echo $product["product_price"] ?></p>
-                                <p>Weight: <?php echo $product['product_weight'] ?>kg</p>
-                            </div>
-                        </div>
+                    </div>
                 <?php
-                    }
+                } elseif ($product['product_type'] === 'Furniture') {
+                ?>
+                    <div class="product">
+                        <input class="delete-checkbox" type="checkbox" name="product_selected[]">
+                        <div class="product-info">
+                            <p> <?php echo $product["sku"] ?></p>
+                            <p> <?php echo $product["product_name"] ?></p>
+                            <p> $<?php echo number_format($product["product_price"],2) ?></p>
+                            <p>Dimension: <?php echo $product['product_dimensions'] ?></p>
+                        </div>
+                    </div>
+                <?php
+                } elseif ($product['product_type'] === 'Book') {
+                ?>
+                    <div class="product">
+                        <input class="delete-checkbox" type="checkbox" name="product_selected[]">
+                        <div class="product-info">
+                            <p> <?php echo $product["sku"] ?></p>
+                            <p> <?php echo $product["product_name"] ?></p>
+                            <p> $<?php echo number_format($product["product_price"],2) ?></p>
+                            <p>Weight: <?php echo $product['product_weight'] ?>kg</p>
+                        </div>
+                    </div>
+            <?php
                 }
                 ?>
             </div>

@@ -21,28 +21,29 @@
 		<main>
 			<div class="input-container">
 				<ul class="input-list">
-					<li class="inputs">
+					<li class="li-inputs">
 						<label for="sku">SKU:</label>
-						<input type="text" id="sku" name="product_sku" placeholder="Enter sku...">
+						<input class="sku-input" type="text" id="sku" name="product_sku" placeholder="Enter sku...">
 					</li>
-					<li class="inputs">
+					<li class="li-inputs">
 						<label for="name">Product Name:</label>
-						<input type="text" id="name" name="product_name" placeholder="Enter name...">
+						<input class="name-input" type="text" id="name" name="product_name" placeholder="Enter name...">
 					</li>
-					<li class="inputs">
+					<li class="li-inputs">
 						<label for="price">Product Price:</label>
-						<input type="number" id="price" name="product_price" placeholder="Enter price...">
+						<input class="price-input" type="number" step="00.01" id="price" name="product_price" placeholder="Enter price...">
 					</li>
-					<li class="inputs">
+					<li class="li-inputs">
 						<label for="type_switcher">Product Type:</label>
-						<select name="type_switcher" id="type_switcher">
+						<select class="type-input" name="type_switcher" id="type_switcher">
 							<option value="Type switcher">Type switcher</option>
 							<option value="DVD">DVD</option>
 							<option value="Furniture">Furniture</option>
 							<option value="Book">Book</option>
 						</select>
 					</li>
-					<li class="generated_li inputs">
+					<li class="generated_li li-inputs">
+
 					</li>
 				</ul>
 			</div>

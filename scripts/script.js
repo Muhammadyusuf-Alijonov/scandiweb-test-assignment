@@ -7,14 +7,14 @@ selector.addEventListener('change', function (){
 
 	if (selectedOption === 'DVD'){
 		const dvd_label = document.createElement('label');
-		dvd_label.textContent = "Size of DVD: ";
-		dvd_label.className = 'label';
-			
+		dvd_label.textContent = "Size of DVD (in MB):";
+
 		const dvd = document.createElement('input');
 		dvd.type = 'number';
+		dvd.step = '00.01';
 		dvd.name = 'size_input';
-		dvd.placeholder = 'Enter the size (in MB)';
-		dvd.className = 'input';
+		dvd.placeholder = 'Enter the size...';
+		dvd.className = 'input size-input dimension';
 
 		generated_li.appendChild(dvd_label);
 		generated_li.appendChild(dvd);
@@ -24,28 +24,31 @@ selector.addEventListener('change', function (){
 		height_label.textContent = 'Height: ';
 
 		const height = document.createElement('input');
-		height.type = 'text';
+		height.type = 'number';
+		height.step = '00.01';
 		height.name = 'height_input';
-		height.placeholder = 'Enter the Height: ';
-		height.className = 'furniture-input';
+		height.placeholder = 'Enter the height... ';
+		height.className = 'furniture-input dimension';
 
 		const width_label = document.createElement('label');
 		width_label.textContent = 'Width: ';
 
 		const width = document.createElement('input');
-		width.type = 'text';
+		width.type = 'number';
+		width.step = '00.01';
 		width.name = 'width_input';
-		width.placeholder = 'Enter the Width';
-		width.className = 'furniture-input';
+		width.placeholder = 'Enter the width...';
+		width.className = 'furniture-input dimension';
 
 		const length_label = document.createElement('label');
 		length_label.textContent = 'Length: ';
 
 		const length = document.createElement('input');
-		length.type = 'text';
+		length.type = 'number';
+		length.step = '00.01';
 		length.name = 'length_input';
-		length.placeholder = 'Enter the Width';
-		length.className = 'furniture-input';
+		length.placeholder = 'Enter the length...';
+		length.className = 'furniture-input dimension';
 
 		generated_li.appendChild(height_label);
 		generated_li.appendChild(height);
@@ -59,15 +62,17 @@ selector.addEventListener('change', function (){
 	} else if (selectedOption === 'Book') {
 
 		const weight_label = document.createElement('label');
-		weight_label.textContent = 'Weight of Book: '
+		weight_label.textContent = 'Weight of Book (in Kg): '
 
 		const weight = document.createElement('input');
 		weight.type = 'number';
+		weight.step = '00.01';
 		weight.name = 'weight_input';
-		weight.placeholder = 'Enter the weight (in Kg): ';
-		weight.className = 'weigth-input';
+		weight.placeholder = 'Enter the weight... ';
+		weight.className = 'weigth-input dimension';
 
 		generated_li.appendChild(weight_label);
 		generated_li.appendChild(weight);
 	}
 })
+

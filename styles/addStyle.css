@@ -12,10 +12,16 @@ nav {
     height: 100px;
 }
 
+nav h1 {
+    font-size: 35px;
+}
+
 .save-btn {
+    height: 45px;
+    width: 70px;
     padding: 10px 15px;
 	margin-right: 10px;
-	background-color: #53c4c4;
+	background-color: #0962ea;
 	border: none;
 	color: white;
 	cursor: pointer;
@@ -23,6 +29,8 @@ nav {
 }
 
 .cancel-btn {
+    height: 45px;
+    width: 90px;
     padding: 10px 15px 10px 15px;
 	margin-left: 10px;
 	background-color: #fb3636;
@@ -47,16 +55,20 @@ nav {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 .input-list li {
     padding: 10px;
 }
-.inputs * {
+.li-inputs * {
     padding: 5px;
-    height: 35px;
-    width: 350px;
+    height: 50px;
+    width: 500px;
 }
+
+/*.li-inputs li {*/
+/*    !*margin-right: 30px;*!*/
+/*}*/
 
 #type_switcher {
     height: 45px;
@@ -67,13 +79,24 @@ nav {
     flex-direction: column;
 }
 
-/* .label {
-    padding-bottom: 10px;
-} */
-/* .type_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.generated_li {
+    margin-left: 150px;
+}
+
+.dimension {
     margin-bottom: 10px;
-    padding-top: 10px;
-} */
+    margin-top: 5px;
+}
+
+.sku-input {
+    margin-left: 100px;
+}
+.name-input {
+    margin-left: 30px;
+}
+.price-input {
+    margin-left: 36px;
+}
+.type-input{
+    margin-left: 38px;
+}
