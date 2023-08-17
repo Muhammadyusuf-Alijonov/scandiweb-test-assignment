@@ -10,17 +10,12 @@ class Database
 
 	public function connect()
 	{
-		try
-		{
+		try {
 			$pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->username, $this->password);
 
 			return $pdo;
-		} catch (PDOException $e) 
-		{
+		} catch (PDOException $e) {
 			die("Connection failed: " . $e->getMessage());
 		}
 	}
 }
-
-
-?>

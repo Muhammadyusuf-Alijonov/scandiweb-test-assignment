@@ -13,5 +13,4 @@ class DeleteProduct extends Database
 
 		return $stmt->rowCount() > 0; // Return true if any rows were affected, false otherwise
 	}
-
 }

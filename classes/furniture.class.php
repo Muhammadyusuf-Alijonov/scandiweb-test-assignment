@@ -1,16 +1,11 @@
-<?php 
+<?php
 
 require_once 'db_object.class.php';
 require_once 'SaveToDb.class.php';
 
-class Furniture extends Db_object {
+class Furniture extends Db_object
+{
+	use SaveToDb;
 
-    use SaveToDb;
-    protected $feature_type = 'product_dimensions';
-
+	protected $feature_type = 'product_dimensions';
 }
-
-
-
-
-?>

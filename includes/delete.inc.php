@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$deleteProd->deleteAll($selectedSkus);
 
-
 		// Redirect back to the main page or display a success message
 		header("Location: ../index.php?deletion_success=1");
 		exit();

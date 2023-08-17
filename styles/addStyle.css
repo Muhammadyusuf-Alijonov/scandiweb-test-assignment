@@ -20,11 +20,11 @@ nav h1 {
     height: 45px;
     width: 70px;
     padding: 10px 15px;
-	margin-right: 10px;
-	background-color: #0962ea;
-	border: none;
-	color: white;
-	cursor: pointer;
+    margin-right: 10px;
+    background-color: #0962ea;
+    border: none;
+    color: white;
+    cursor: pointer;
     border-radius: 10px;
 }
 
@@ -32,11 +32,11 @@ nav h1 {
     height: 45px;
     width: 90px;
     padding: 10px 15px 10px 15px;
-	margin-left: 10px;
-	background-color: #fb3636;
-	color: white;
-	border: none;
-	cursor: pointer;
+    margin-left: 10px;
+    background-color: #fb3636;
+    color: white;
+    border: none;
+    cursor: pointer;
     border-radius: 10px;
 }
 
@@ -57,9 +57,11 @@ nav h1 {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .input-list li {
     padding: 10px;
 }
+
 .li-inputs * {
     padding: 5px;
     height: 50px;
@@ -71,6 +73,7 @@ nav h1 {
     height: 15px;
     width: 400px;
 }
+
 /*.li-inputs li {*/
 /*    !*margin-right: 30px;*!*/
 /*}*/
@@ -96,18 +99,23 @@ nav h1 {
 .sku-input {
     margin-left: 100px;
 }
+
 .name-input {
     margin-left: 30px;
 }
+
 .price-input {
     margin-left: 36px;
 }
-.type-input{
+
+.type-input {
     margin-left: 38px;
 }
+
 .weight-input {
     margin-left: 25px;
 }
+
 .size-input {
     margin-left: 49px;
 }

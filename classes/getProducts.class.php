@@ -1,8 +1,10 @@
 <?php
 require_once "database.class.php";
 
-class GetProduct extends Database {
-	public function getProduct(){
+class GetProduct extends Database
+{
+	public function getProduct()
+	{
 		$sql = "SELECT * FROM products";
 		$stmt = $this->connect()->prepare($sql);
 
@@ -14,7 +16,5 @@ class GetProduct extends Database {
 
 		$product = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		return $product;
-
 	}
-
 }
